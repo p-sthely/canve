@@ -24,7 +24,7 @@ const data = {
         ],
         a: {
             style: `
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 font-weight: 200;
                 letter-spacing: .25em;
                 color: #333333;

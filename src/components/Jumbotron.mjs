@@ -1,70 +1,49 @@
 const data = {
     style: `
-        background-image: url('./src/assets/images/cover.jpeg');
-        background-size: cover;
-        height: 100vh;
-        padding: 0;
-        min-height: 436px;
+        background-color: #253551;
+        margin-bottom: 0;
     `,
     contentWrapper: {
         style: `
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, .5);
-        `
-    },
-    linksList: {
-        links: [
-            { value: 'Lorem',               href: '#' },
-            { value: 'Consectetur',         href: '#' },
-            { value: 'Aenean',              href: '#' },
-            { value: 'Suscipit accumsan',   href: '#' },
-        ],
-        ul: {
+            max-width: 75em;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3em;
+        `,
+        p: {
             style: `
-                list-style-type: none;
-                padding-left: 0;
-                margin-left: 15%;
-            `
-        },
-        li: {
-            style: `
-                padding: 1.2em;
-            `
-        },
-        a: {
-            style: `
-                font-size: 6rem;
-                font-weight: 200;
-                letter-spacing: .1em;
-                line-height: 1.25;
-                text-decoration: underline;
-                text-underline-offset: .2em;
+                font-size: 3rem;
                 color: #F4F4F4;
+                line-height: 1.5;
+                letter-spacing: .1em;
+            `
+        },
+        button: {
+            style: `
+                font-size: 1.5rem;
+                letter-spacing: .25em;
+                background-color: #253551;
+                border-color: #F4F4F4;
+                color: #F4F4F4;
+                border-radius: 0;
+                border-width: 2px;
+                padding-left: 3em;
+                padding-right: 3em;
+                padding-top: 1.25em;
+                padding-bottom: 1.25em;
+                margin-top: 25px;
             `
         }
     }
 }
 
-// construct the navbar right links list
-let linksList = new String
-
-for(const item of data.linksList.links)
-    linksList += `
-        <li style="${ data.linksList.li.style }">
-            <a href="${ item.href }" style="${ data.linksList.a.style }">
-                ${ item.value }</a>
-        </li>
-    `
-
 const template = `
 <div class="jumbotron" style="${ data.style }">
     <div class="contentWrapper" style="${ data.contentWrapper.style }">
-        <ul class="linksList" style="${ data.linksList.ul.style }">
-            ${ linksList }
-        </ul>
+        <p style="${ data.contentWrapper.p.style }">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas sollicitudin risus, vehicula pulvinar turpis.</p>
+        <p style="${ data.contentWrapper.p.style }">Class aptent taciti sociosqu ad litora torquent</p>
+        <button class="btn btn-default" type="submit" style="${ data.contentWrapper.button.style }">Non venenatis metus</button>
     </div>
 </div>
 `
