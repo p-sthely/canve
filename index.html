@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vance</title>
+    <!-- font awesome -->
+    <link href="./src/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap requirements -->
+    <link href="./src/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./src/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="./src/assets/js/ie-emulation-modes-warning.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="./src/main.js"></script>
+    <script type="module">
+        // import the index.mjs view
+        import view from './src/views/index.mjs'
+
+        // get HTML from view
+        const template = `
+            ${ view }
+        `
+
+        // write HTML to div(#app)
+        document.querySelector('#app').innerHTML = template
+    </script>
+    <!-- Bootstrap requirements -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./src/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./src/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
