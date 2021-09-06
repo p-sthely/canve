@@ -48,7 +48,7 @@ const data = {
 // construct the navbar right links list
 let linksList = new String
 
-for(const item of data.linksList.links)
+for(const item of data.values.linksList)
     linksList += `
         <li style="${ data.css.linksList.li }">
             <a href="${ item.href }" style="${ data.css.linksList.a }">
