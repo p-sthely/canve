@@ -43,7 +43,7 @@ const template = `
     <div class="contentWrapper" style="${ data.contentWrapper.style }">
         <p style="${ data.contentWrapper.p.style }">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas sollicitudin risus, vehicula pulvinar turpis.</p>
         <p style="${ data.contentWrapper.p.style }">Class aptent taciti sociosqu ad litora torquent</p>
-        <button class="btn btn-default" type="submit" style="${ data.contentWrapper.button.style }">Non venenatis metus</button>
+        <button id="jumbotronBtn" class="btn btn-default" type="submit" style="${ data.contentWrapper.button.style }">Non venenatis metus</button>
     </div>
 </div>
 `
