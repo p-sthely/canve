@@ -35,29 +35,13 @@ const data = {
             `
         }
     },
-    linksList: {
-        links: [
+    values: {
+        linksList: [
             { value: 'Lorem',       href: '#' },
             { value: 'Consectetur', href: '#' },
             { value: 'Aenean',      href: '#' },
             { value: 'Accumsan',    href: '#' }
-        ],
-        li: {
-            style: `
-                padding: 1.2em;
-            `
-        },
-        a: {
-            style: `
-                font-size: 5rem;
-                font-weight: 200;
-                letter-spacing: .1em;
-                text-decoration: none;
-                line-height: 1.25;
-                border-bottom: solid 2px #F4F4F4;
-                color: #F4F4F4;
-            `
-        }
+        ]
     }
 }
 
