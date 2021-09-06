@@ -10,7 +10,7 @@ $(document).ready(function(){
             'color': '#333333'
         })
     })
-    $('.btn').on('mouseout', function(){
+    $('#jumbotronBtn').on('mouseout', function(){
         $(this).css({
             'background-color': '#253551',
             'color': '#F4F4F4'
