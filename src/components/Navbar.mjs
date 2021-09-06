@@ -1,51 +1,51 @@
 const data = {
-    style: `
-        border: none;
-        margin-bottom: 0;
-        padding: 2em;
-        background-color: #F4F4F4;
-    `,
-    navbarBrand: {
-        value: 'Canve',
-        style: `
+    css: {
+        navbar: `
+            border: none;
+            margin-bottom: 0;
+            padding: 2em;
+            background-color: #F4F4F4;
+        `,
+        navbarBrand: `
             font-size: 3rem;
             font-weight: 200;
             color: #333333;
-        `
-    },
-    linksList: {
-        links: [
-            { value: 'Lorem',                                                   href: '#' },
-            { value: 'Consectetur',                                             href: '#' },
-            { value: 'Aenean',                                                  href: '#' },
-            { value: 'Suscipit accumsan',                                       href: '#' },
-            { value: '<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>', href: '#' },
-            { value: '<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>',  href: '#' }
-        ],
-        a: {
-            style: `
+        `,
+        linksList: {
+            a: `
                 font-size: 1.5rem;
                 font-weight: 200;
                 letter-spacing: .25em;
                 color: #333333;
             `
         }
+    },
+    values: {
+        navbarBrand: 'Canve',
+        linksList: [
+            { value: 'Lorem',                                                   href: '#' },
+            { value: 'Consectetur',                                             href: '#' },
+            { value: 'Aenean',                                                  href: '#' },
+            { value: 'Suscipit accumsan',                                       href: '#' },
+            { value: '<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>', href: '#' },
+            { value: '<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>',  href: '#' }
+        ]
     }
 }
 
 // construct the navbar right links list
 let linksList = new String
 
-for(const item of data.linksList.links)
+for(const item of data.values.linksList)
     linksList += `
         <li>
-            <a href="${ item.href }" style="${ data.linksList.a.style }">
+            <a href="${ item.href }" style="${ data.css.linksList.a }">
                 ${ item.value }</a>
         </li>
     `
 
 const template = `
-<nav class="navbar navbar-default" style="${ data.style }">
+<nav class="navbar navbar-default" style="${ data.css.navbar }">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -54,7 +54,7 @@ const template = `
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="${ data.navbarBrand.style }">${ data.navbarBrand.value }</a>
+            <a class="navbar-brand" href="#" style="${ data.css.navbarBrand }">${ data.values.navbarBrand }</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
