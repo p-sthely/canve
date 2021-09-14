@@ -7,8 +7,12 @@ const data = {
 }
 
 const template = `
-    ${ Navbar }
-    ${ Cover }
-    ${ Jumbotron }
+<div class="container-fluid">
+    <div class="row">
+        ${ Navbar }
+        ${ Cover }
+        ${ Jumbotron }
+    </div>
+</div>
 `
 export default template

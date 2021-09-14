@@ -16,4 +16,4 @@ $(document).ready(function(){
             'color': '#F4F4F4'
         })
     })
-});
+})

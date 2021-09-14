@@ -25,7 +25,6 @@ const data = {
                 padding: 1.2em;
             `,
             a: `
-                font-size: 5rem;
                 font-weight: 200;
                 letter-spacing: .1em;
                 text-decoration: none;
@@ -45,7 +44,7 @@ const data = {
     }
 }
 
-// construct the navbar right links list
+// construct the links list
 let linksList = new String
 
 for(const item of data.values.linksList)

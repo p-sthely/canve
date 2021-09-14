@@ -3,13 +3,13 @@ const data = {
         jumbotron: `
             background-color: #253551;
             margin-bottom: 0;
+            border-radius: 0;
         `,
         contentWrapper: `
             max-width: 75em;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
-            padding: 3em;
         `,
         p: `
             font-size: 3rem;
@@ -25,10 +25,6 @@ const data = {
             color: #F4F4F4;
             border-radius: 0;
             border-width: 2px;
-            padding-left: 3em;
-            padding-right: 3em;
-            padding-top: 1.25em;
-            padding-bottom: 1.25em;
             margin-top: 25px;
         `
     }

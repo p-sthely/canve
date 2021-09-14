@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canve</title>
+    <!-- main css -->
+    <link href="./src/global.css" rel="stylesheet">
     <!-- font awesome -->
     <link href="./src/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap requirements -->
@@ -21,7 +23,7 @@
 
     <script type="module">
         // import the index.mjs view
-        import view from './src/views/index.mjs'
+        import view from './src/views/homepage.mjs'
 
         // get HTML from view
         const template = `
@@ -30,12 +32,14 @@
 
         // write HTML to div(#app)
         document.querySelector('#app').innerHTML = template
+        
     </script>
     <!-- Bootstrap requirements -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./src/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="./src/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- main javascript -->
     <script src="./src/main.js"></script>
 </body>
 </html>
