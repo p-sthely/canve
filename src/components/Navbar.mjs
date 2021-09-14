@@ -18,7 +18,10 @@ const data = {
                 letter-spacing: .25em;
                 color: #333333;
             `
-        }
+        },
+        socialLinksList: `
+            display: inline-block;
+        `
     },
     values: {
         navbarBrand: 'Canve',
@@ -26,7 +29,9 @@ const data = {
             { value: 'Lorem',                                                   href: '#' },
             { value: 'Consectetur',                                             href: '#' },
             { value: 'Aenean',                                                  href: '#' },
-            { value: 'Suscipit accumsan',                                       href: '#' },
+            { value: 'Suscipit accumsan',                                       href: '#' }
+        ],
+        socialLinksList: [
             { value: '<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>', href: '#' },
             { value: '<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>',  href: '#' }
         ]
@@ -39,6 +44,17 @@ let linksList = new String
 for(const item of data.values.linksList)
     linksList += `
         <li>
+            <a href="${ item.href }" style="${ data.css.linksList.a }">
+                ${ item.value }</a>
+        </li>
+    `
+
+// construct the navbar right social links list
+let socialLinksList = new String
+
+for(const item of data.values.socialLinksList)
+    socialLinksList += `
+        <li style="${ data.css.socialLinksList }">
             <a href="${ item.href }" style="${ data.css.linksList.a }">
                 ${ item.value }</a>
         </li>
@@ -61,6 +77,9 @@ const template = `
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 ${ linksList }
+                <ul class="nav navbar-nav">
+                    ${ socialLinksList }
+                </ul>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
